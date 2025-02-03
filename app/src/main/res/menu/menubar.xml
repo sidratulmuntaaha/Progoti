@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/home_Fragment"
+        android:icon="@drawable/home"/>
+    <item android:title="Search"
+        android:id="@+id/search_Fragment"
+        android:icon="@drawable/search"/>
+    <item android:title="My learning"
+        android:id="@+id/my_learning_Fragment"
+        android:icon="@drawable/my_learning"/>
+    <item android:title="More"
+        android:id="@+id/more_Fragment"
+        android:icon="@drawable/more"/>
+    <item android:title="Account"
+        android:id="@+id/account_Fragment"
+        android:icon="@drawable/account"/>
+</menu>

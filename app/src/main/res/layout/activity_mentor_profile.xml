@@ -1,0 +1,593 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Navigation Drawer Icon -->
+        <ImageView
+            android:id="@+id/drawer_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Menu"
+            android:layout_alignParentStart="true" />
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_background"
+            android:layout_toEndOf="@id/drawer_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/account"
+            android:contentDescription="Profile Image" />
+
+        <!-- Mentor Name -->
+        <TextView
+            android:id="@+id/mentor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:text="Mentor Name"
+
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Form Fields -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mentor_name"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Department -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Department:" />
+
+            <TextView
+                android:id="@+id/department_display"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="  CSE"
+                android:background="@drawable/bg_2"/> <!-- Static text for demonstration -->
+
+            <!-- Level -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Level:" />
+
+            <TextView
+                android:id="@+id/level_display"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_2"
+                android:hint="Level 3 Term 1" /> <!-- Static text for demonstration -->
+
+            <!-- Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+
+                android:text="Type:" />
+
+            <RadioGroup
+                android:id="@+id/type_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/type_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group" />
+
+                <RadioButton
+                    android:id="@+id/type_individual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Individual" />
+
+                <RadioButton
+                    android:id="@+id/type_both"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Both" />
+            </RadioGroup>
+
+            <!-- Category -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Category:" />
+
+            <EditText
+                android:id="@+id/category_input"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_2"
+                android:hint="Enter category" />
+
+            <!-- CGPA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:text="CGPA:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/cgpa_1st_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_2"
+                    android:hint="1st Semester" />
+
+                <EditText
+                    android:id="@+id/cgpa_2nd_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_2"
+                    android:hint="2nd Semester" />
+
+                <EditText
+                    android:id="@+id/cgpa_3rd_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_2"
+                    android:hint="3rd Semester" />
+
+                <EditText
+                    android:id="@+id/cgpa_4th_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_2"
+                    android:hint="4th Semester" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/selected_file_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No file selected"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/attach_file_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attach File"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/selected_file_text"/>
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        &lt;!&ndash; Navigation Drawer Icon &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/drawer_icon"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_margin="16dp"-->
+<!--            android:contentDescription="Menu"-->
+<!--            android:layout_alignParentStart="true" />-->
+
+<!--        &lt;!&ndash; Page Title &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/page_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toEndOf="@id/drawer_icon"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        &lt;!&ndash; Profile Image &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/profile_image"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/account"-->
+<!--            android:contentDescription="Profile Image" />-->
+
+<!--        &lt;!&ndash; Mentor Name &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/mentor_name"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/profile_image"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:text="Mentor Name"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        &lt;!&ndash; Form Fields &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/mentor_name"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp">-->
+
+<!--            &lt;!&ndash; Department &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Department:" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/department_display"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="CSE" /> &lt;!&ndash; Static text for demonstration &ndash;&gt;-->
+
+<!--            &lt;!&ndash; Level &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="Level:" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/level_display"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Level 3 Term 1" /> &lt;!&ndash; Static text for demonstration &ndash;&gt;-->
+
+<!--            &lt;!&ndash; Type &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="Type:" />-->
+
+<!--            <RadioGroup-->
+<!--                android:id="@+id/type_radio_group"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/type_group"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Group" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/type_individual"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Individual" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/type_both"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Both" />-->
+<!--            </RadioGroup>-->
+
+<!--            &lt;!&ndash; Category &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="Category:" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/category_input"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="16dp"-->
+<!--                android:hint="Enter category" />-->
+
+<!--            &lt;!&ndash; CGPA &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="CGPA:" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/cgpa_1st_semester"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:hint="1st Semester" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/cgpa_2nd_semester"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:hint="2nd Semester" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/cgpa_3rd_semester"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:hint="3rd Semester" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/cgpa_4th_semester"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:hint="4th Semester" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Attach File Button &ndash;&gt;-->
+
+<!--            &lt;!&ndash; Submit Button &ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/attach_file_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Attach file" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/submit_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Submit"-->
+<!--                android:layout_gravity="center" />-->
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->
+<!--</LinearLayout>-->
+<!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;    xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--&lt;!&ndash;    xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--&lt;!&ndash;    xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:orientation="vertical">&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Main Content &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Navigation Drawer Icon &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/drawer_icon"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="48dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="48dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:contentDescription="Menu"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_alignParentStart="true" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Page Title &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/page_title"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_toEndOf="@id/drawer_icon"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_centerVertical="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="18sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Profile Image &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/profile_image"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginBottom="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/account"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:contentDescription="Profile Image" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Mentor Name &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/mentor_name"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_below="@id/profile_image"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Mentor Name"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="16sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Form Fields &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_below="@id/mentor_name"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:padding="16dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Department &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Department:" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/department_display"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="CSE" /> &lt;!&ndash; Static text for demonstration &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Level &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Level:" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/level_display"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Level 3 Term 1" /> &lt;!&ndash; Static text for demonstration &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Type &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Type:" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <RadioGroup&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/type_radio_group"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/type_group"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Group" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/type_individual"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Individual" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/type_both"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Both" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </RadioGroup>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Category &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Category:" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/category_input"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:hint="Enter category" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; CGPA &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="CGPA:" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="vertical">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/cgpa_1st_semester"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:hint="1st Semester" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/cgpa_2nd_semester"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:hint="2nd Semester" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/cgpa_3rd_semester"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:hint="3rd Semester" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/cgpa_4th_semester"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:hint="4th Semester" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; Submit Button &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/submit_button"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Submit"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_gravity="center" />&ndash;&gt;-->
+<!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;    </RelativeLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->

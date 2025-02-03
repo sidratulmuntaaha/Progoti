@@ -1,0 +1,140 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Navigation Drawer Icon -->
+        <ImageView
+            android:id="@+id/drawer_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Menu"
+            android:layout_alignParentStart="true" />
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/drawer_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/account"
+            android:contentDescription="Profile Image" />
+
+        <!-- Mentor Name -->
+        <TextView
+            android:id="@+id/mentor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:text="Mentee Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Form Fields -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mentor_name"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Department -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Department:" />
+
+            <TextView
+                android:id="@+id/department_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CSE" /> <!-- Static text for demonstration -->
+
+            <!-- Level -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Level:" />
+
+            <TextView
+                android:id="@+id/level_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Level 3 Term 1" /> <!-- Static text for demonstration -->
+
+            <!-- Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Type:" />
+
+            <RadioGroup
+                android:id="@+id/type_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/type_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group" />
+
+                <RadioButton
+                    android:id="@+id/type_individual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Individual" />
+
+                <RadioButton
+                    android:id="@+id/type_both"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Both" />
+            </RadioGroup>
+
+            <!-- Category -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Category:" />
+
+            <EditText
+                android:id="@+id/category_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:hint="Enter category" />
+
+            <!-- CGPA -->
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
